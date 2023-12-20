@@ -12,6 +12,40 @@
   Hello world
   <script src="script.js"></script>
 
+  <title>Button Click Counter</title>
+  <script>
+    function updateClickCount() {
+      var count = localStorage.getItem('clickCount');
+      count = count ? parseInt(count) + 1 : 1;
+      localStorage.setItem('clickCount', count);
+      document.getElementById('clickCount').innerHTML = count;
+    }
+  </script>
+</head>
+<body>
+  <button onclick="updateClickCount()">Click me</button>
+  <div>Click count: <span id="clickCount"></span></div>
+
+  
+<!DOCTYPE html>
+<html>
+
+  <button onclick="playSound()">Wow</button>
+  <script>
+    function playSound() {
+      var audio = new Audio('omg.mp3');
+      audio.play();
+      document.body.style.backgroundImage = "url('images.jpeg')";
+      document.body.style.backgroundSize = "cover";
+    }
+  </script>
+</body>
+
+</html>
+
+  
+</body>
+</html>
 </body>
 
 </html>
